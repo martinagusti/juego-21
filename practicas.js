@@ -253,7 +253,7 @@ function nuevoJuego(){
             modal_container3.setAttribute("class", "modal_container3")
         }
         
-    }, 1500);
+    }, 800);
 
     
     
