@@ -244,6 +244,7 @@ function aceptar(){
         modal_container3.setAttribute("class", "modal_container")
         counter = 0
         tiro = 1
+        tirada = 1
         counter2 = 0;
         h2.textContent = counter2
         h2_casa.textContent = `La casa: ${counter}`
