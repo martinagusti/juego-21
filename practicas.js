@@ -138,7 +138,7 @@ function plantarse(){
     console.log("---------------------")
     
 
-            for(let i = 0; i < 10; i++){
+            /* for(let i = 0; i < 10; i++){
             
                 let random = Math.floor(Math.random() * 52 )
                 let random2 = Math.floor(Math.random() * 52 )
@@ -203,22 +203,43 @@ function plantarse(){
                 }
 
             
-            }
+            } */
+
+            setTimeout(() => {
+                primera()
+                
+            }, 500);
+
+            setTimeout(() => {
+                segunda()
+                
+            }, 1500);
+
+            setTimeout(() => {
+                tercera()
+                
+            }, 2500);
+
+            setTimeout(() => {
+                cuarta()
+                
+            }, 3500);
+
+            setTimeout(() => {
+                quinta()
+                
+            }, 4500);
+
+            setTimeout(() => {
+                comprobacion()
+                
+            }, 6000);
+
+
+
+
     
-        console.log("Total: " + counter)
-    
-        if(counter2 > counter && counter2 <= 21){
-            console.log("Has ganado la partida!!!")
-            win = true
-            nuevoJuego()
-        }else if(counter2 <= 21 && counter > 21){
-            console.log("Has ganado la partida!!!")
-            win = true
-            nuevoJuego()
-        }else{
-            console.log("Looser!!!")
-            nuevoJuego()
-        }
+       
    
 }
 
@@ -272,6 +293,122 @@ function cancelar(){
     modal_container.setAttribute("class", "modal_container")
     
 }
+
+function primera(){
+
+    let random = Math.floor(Math.random() * 52 )
+    let random2 = Math.floor(Math.random() * 52 )
+
+    if(tirada === 1){
+        counter = counter + cartas[random]
+        counter = counter + cartas[random2]
+        console.log(cartas[random])
+        console.log(cartas[random2])
+        carta7.style.backgroundImage = `url(img/${img_naipes[random]}.jpg)`
+        carta8.style.backgroundImage = `url(img/${img_naipes[random2]}.jpg)`
+        h2_casa.textContent = `La casa: ${counter}`
+        
+
+    }
+    if((counter > counter2 && counter <= 21) || counter > 21){
+        comprobacion()
+       }else{
+        tirada++
+       }
+}
+
+function segunda(){
+    let random = Math.floor(Math.random() * 52 )
+   
+    if(tirada === 2){
+        counter = counter + cartas[random]
+        console.log(cartas[random])
+        carta9.style.backgroundImage = `url(img/${img_naipes[random]}.jpg)`
+        h2_casa.textContent = `La casa: ${counter}`
+    
+    }
+    if((counter > counter2 && counter <= 21) || counter > 21){
+        comprobacion()
+    }else{
+     tirada++
+    }
+}
+
+
+function tercera(){
+    let random = Math.floor(Math.random() * 52 )
+   
+    if(tirada === 3){
+        counter = counter + cartas[random]
+        console.log(cartas[random])
+        carta10.style.backgroundImage = `url(img/${img_naipes[random]}.jpg)`
+        h2_casa.textContent = `La casa: ${counter}`
+       
+
+    }
+
+    if((counter > counter2 && counter <= 21) || counter > 21){
+        comprobacion()
+    }else{
+     tirada++
+    }
+}
+
+
+function cuarta(){
+    let random = Math.floor(Math.random() * 52 )
+   
+    if(tirada === 4){
+        counter = counter + cartas[random]
+        console.log(cartas[random])
+        carta11.style.backgroundImage = `url(img/${img_naipes[random]}.jpg)`
+        h2_casa.textContent = `La casa: ${counter}`
+        
+    }
+
+    if((counter > counter2 && counter <= 21) || counter > 21){
+        comprobacion()
+    }else{
+     tirada++
+    }
+}
+
+function quinta(){
+    let random = Math.floor(Math.random() * 52 )
+   
+    if(tirada === 5){
+        counter = counter + cartas[random]
+        console.log(cartas[random])
+        carta12.style.backgroundImage = `url(img/${img_naipes[random]}.jpg)`
+        h2_casa.textContent = `La casa: ${counter}`
+        
+    }
+    if((counter > counter2 && counter <= 21) || counter > 21){
+        comprobacion()
+    }else{
+     tirada++
+    }
+}
+
+function comprobacion(){
+    console.log("Total: " + counter)
+    
+    if(counter2 > counter && counter2 <= 21){
+        console.log("Has ganado la partida!!!")
+        win = true
+        nuevoJuego()
+    }else if(counter2 <= 21 && counter > 21){
+        console.log("Has ganado la partida!!!")
+        win = true
+        nuevoJuego()
+    }else{
+        console.log("Looser!!!")
+        nuevoJuego()
+    }
+}
+
+
+
 
 
 
