@@ -1,0 +1,181 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    padding: 5px;
+    height: 95vh;
+    position: relative;
+}
+
+header{
+    height: 10%;
+    background-color: rgb(56, 44, 223);
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    font-size: 25px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+h2{
+    font-size: 45px;
+    color: blue;
+    
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+button{
+    width: 100px;
+    height: 40px;
+    background-color: greenyellow;
+    margin-bottom: 5px;
+    margin-right: 5px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 4px rgb(105, 95, 95);
+}
+
+#plantarse{
+    background-color: rgb(245, 77, 77);
+    
+    
+}
+
+
+
+
+button:hover{
+    background-color: rgb(25, 167, 67);
+    cursor: pointer;
+}
+
+article {
+    
+    width: 100px;
+    height: 150px;
+    background-image: url("naipe.jpg");
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 7px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    box-shadow: 5px 5px 4px 1px grey
+}
+
+.section2{
+    width: 50px;
+    height: 70px;
+    background-image: url("naipe.jpg");
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    box-shadow: 5px 5px 4px 1px grey;
+    padding: 2px; 
+    
+}
+
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 5px;
+}
+
+
+
+
+
+.modal_container{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    background-color: rgba(128, 128, 128, 0.7);
+    display: none;
+    
+   
+}
+
+.modal_container2{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    background-color: rgba(128, 128, 128, 0.7);
+    display: auto;
+    
+    
+}
+.modal_container3{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    background-color: rgba(128, 128, 128, 0.7);
+    display: auto;
+    
+    
+}
+
+
+
+
+
+.ventana{
+    background-color: aliceblue;
+    width: 200px;
+    height: 200px;
+    border-radius: 20%;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 3px 3px 3px rgb(84, 81, 81);
+}
+
+.ventana h2{
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.ventana button{
+    background-color: rgb(89, 235, 97);
+}
+
+.aparecer{
+    animation-name: aparecer;
+    animation-duration: 0.5s;
+    animation-direction: reverse;
+}
+
+
+
+@keyframes aparecer {
+    0%{
+        opacity: 0.5;
+       transform: translateX(0);
+        
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateX(400%);
+    }
+}
+
+
+
